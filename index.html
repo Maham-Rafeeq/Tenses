@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tense</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <div class="header">
+  <h1>Tenses <span>Made Easy</span></h1>
+  <p>Learn, compare & practice all 12 English tenses step by step</p>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="showTab('learn')">📚 Learn Tenses</button>
+  <button class="tab-btn" onclick="showTab('compare')">🔍 Compare & Confuse-Fix</button>
+  <button class="tab-btn" onclick="showTab('quiz')">✏️ Quiz Me</button>
+  <button class="tab-btn" onclick="showTab('cheat')">⚡ Quick Cheatsheet</button>
+</div>
+
+<!-- ===== LEARN ===== -->
+<div class="section active" id="learn">
+  <p class="section-label">Click any tense to see examples & usage</p>
+  <div class="timeline" id="tenseList"></div>
+</div>
+
+<!-- ===== COMPARE ===== -->
+<div class="section" id="compare">
+  <p class="section-label">Most confusing tense pairs — side by side</p>
+  <div class="compare-grid" id="compareGrid"></div>
+</div>
+
+<!-- ===== QUIZ ===== -->
+<div class="section" id="quiz">
+  <div class="quiz-box">
+    <div class="quiz-progress">
+      <span id="qCount">Question 1 of 12</span>
+      <span id="qScore">Score: 0</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progFill" style="width:0%"></div></div>
+    <div id="quizMain">
+      <div class="quiz-q" id="qQuestion"></div>
+      <div class="quiz-sentence" id="qSentence"></div>
+      <div class="quiz-options" id="qOptions"></div>
+      <div class="quiz-feedback" id="qFeedback"></div>
+      <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Next Question →</button>
+    </div>
+    <div class="score-screen" id="scoreScreen">
+      <div class="score-num" id="finalScore"></div>
+      <div class="score-msg" id="scoreMsg"></div>
+      <button class="restart-btn" onclick="startQuiz()">Try Again</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CHEAT ===== -->
+<div class="section" id="cheat">
+  <p class="section-label">All 12 tenses at a glance</p>
+  <div class="cheat-grid" id="cheatGrid"></div>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
